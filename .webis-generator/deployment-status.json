@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-13T13:48:18.461Z",
+  "timestamp": "2025-11-13T14:00:20.582Z",
   "steps": {
     "planGenerated": false,
     "componentsGenerated": false,
@@ -9,6 +9,6 @@
     "deploymentStarted": false,
     "deploymentComplete": false
   },
-  "deployedUrl": null,
+  "deployedUrl": "https://webis-site-msprh-gma-1763041697900.vercel.app",
   "error": null
 }
