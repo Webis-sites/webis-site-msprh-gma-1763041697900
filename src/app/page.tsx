@@ -7,6 +7,7 @@ import Services from '@/components/Services';
 import Products from '@/components/Products';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import Testimonials from '@/components/Testimonials';
+import FAQ from '@/components/FAQ';
 
 export default function HomePage() {
   return (
@@ -20,6 +21,7 @@ export default function HomePage() {
         <Products />
         <WhyChooseUs />
         <Testimonials />
+        <FAQ />
       </main>
     </>
   );
