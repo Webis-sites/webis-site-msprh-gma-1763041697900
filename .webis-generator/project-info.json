@@ -1,8 +1,35 @@
 {
   "projectName": "מספרה-גמא-1698",
   "businessName": "מספרה גמא",
-  "created": "2025-11-13T13:48:18.461Z",
-  "status": "initialized",
-  "progress": 0,
-  "components": []
+  "description": "אנחנו מספרה מוביל בתחום הבריאות עם ניסיון של שנים רבות. אנחנו מתמחים במתן שירות מקצועי ואיכותי ללקוחותינו.",
+  "created": "2025-11-13T13:48:53.396Z",
+  "generatedWith": "webis-generator",
+  "repoName": "webis-site-msprh-gma-1763041697900",
+  "formData": {
+    "businessName": "מספרה גמא",
+    "businessType": "מספרה",
+    "industry": "בריאות",
+    "businessSize": "small",
+    "description": "אנחנו מספרה מוביל בתחום הבריאות עם ניסיון של שנים רבות. אנחנו מתמחים במתן שירות מקצועי ואיכותי ללקוחותינו.",
+    "language": "he",
+    "primaryColor": "#45B7D1",
+    "secondaryColor": "#FF6B6B",
+    "typographyStyle": "playful",
+    "animationPreference": "minimal",
+    "headline": "מספרה מוביל בישראל",
+    "descriptionText": "חווית לקוח מושלמת בכל ביקור",
+    "ctaText": "קבע תור עכשיו",
+    "formFields": "שם, טלפון, אימייל, הודעה",
+    "includeTestimonials": true,
+    "includeFAQ": true,
+    "hasProducts": true,
+    "hasServices": true,
+    "hasPortfolio": false,
+    "needsBookingSystem": false,
+    "metaDescription": "מספרה מוביל המספק שירות מקצועי ואיכותי. הזמינו תור עוד היום!",
+    "metaKeywords": "מספרה, שירות, איכות, מקצועיות, ישראל",
+    "designStyles": [
+      "retro"
+    ]
+  }
 }
