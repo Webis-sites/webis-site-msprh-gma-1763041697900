@@ -99,47 +99,56 @@ const ProductsSection: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={containerVariants}
+          className="text-center mb-12"
         >
           <motion.h2 
             variants={itemVariants}
-            className="text-4xl md:text-5xl font-bold text-center mb-4 text-[#45B7D1]"
+            className="text-4xl md:text-5xl font-bold mb-4 text-[#FF6B6B]"
+            style={{ textShadow: '2px 2px 0px #45B7D1' }}
           >
             המוצרים שלנו
           </motion.h2>
           <motion.p 
             variants={itemVariants}
-            className="text-center text-gray-600 mb-12 max-w-2xl mx-auto"
+            className="text-lg text-gray-700 max-w-2xl mx-auto"
           >
             מגוון מוצרי טיפוח איכוtiים למראה מושלם
           </motion.p>
+        </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {products.map((product) => (
-              <motion.div
-                key={product.id}
-                variants={itemVariants}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="relative h-64 w-full">
-                  <Image
-                    src={product.imageUrl}
-                    alt={product.name}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-[#FF6B6B]">{product.name}</h3>
-                  <p className="text-gray-600">{product.description}</p>
-                  <button className="mt-4 flex items-center gap-2 text-[#45B7D1] hover:text-[#FF6B6B] transition-colors">
-                    <FaInfoCircle />
-                    <span>פרטים נוספים</span>
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={containerVariants}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
+          {products.map((product) => (
+            <motion.div
+              key={product.id}
+              variants={itemVariants}
+              whileHover={{ scale: 1.05, rotate: 1 }}
+              className="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-[#45B7D1] hover:border-[#FF6B6B] transition-all duration-300"
+            >
+              <div className="relative h-48 w-full">
+                <Image
+                  src={product.imageUrl}
+                  alt={product.name}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-xl font-bold text-[#FF6B6B] mb-2">{product.name}</h3>
+                <p className="text-gray-600 text-sm">{product.description}</p>
+                <button className="mt-4 w-full bg-[#45B7D1] hover:bg-[#FF6B6B] text-white font-bold py-2 px-4 rounded transition-colors duration-300 flex items-center justify-center gap-2">
+                  <FaInfoCircle />
+                  <span>פרטים נוספים</span>
+                </button>
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>
