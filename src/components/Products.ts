@@ -117,10 +117,10 @@ const ProductsSection: React.FC = () => {
         </motion.div>
 
         <motion.div 
+          variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={containerVariants}
+          viewport={{ once: true, amount: 0.2 }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {products.map((product) => (
@@ -128,7 +128,8 @@ const ProductsSection: React.FC = () => {
               key={product.id}
               variants={itemVariants}
               whileHover={{ scale: 1.05, rotate: 1 }}
-              className="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-[#45B7D1] hover:border-[#FF6B6B] transition-all duration-300"
+              className="bg-white rounded-lg overflow-hidden shadow-lg border-4 border-[#45B7D1] hover:border-[#FF6B6B] transition-all duration-300"
+              style={{ boxShadow: '4px 4px 0px #FF6B6B' }}
             >
               <div className="relative h-48 w-full">
                 <Image
@@ -140,9 +141,9 @@ const ProductsSection: React.FC = () => {
                 />
               </div>
               <div className="p-4">
-                <h3 className="text-xl font-bold text-[#FF6B6B] mb-2">{product.name}</h3>
+                <h3 className="text-xl font-bold mb-2 text-[#45B7D1]">{product.name}</h3>
                 <p className="text-gray-600 text-sm">{product.description}</p>
-                <button className="mt-4 w-full bg-[#45B7D1] hover:bg-[#FF6B6B] text-white font-bold py-2 px-4 rounded transition-colors duration-300 flex items-center justify-center gap-2">
+                <button className="mt-4 w-full bg-[#FF6B6B] text-white py-2 px-4 rounded-lg hover:bg-[#45B7D1] transition-colors duration-300 flex items-center justify-center gap-2">
                   <FaInfoCircle />
                   <span>פרטים נוספים</span>
                 </button>
