@@ -100,38 +100,42 @@ const ProductsSection: React.FC = () => {
           viewport={{ once: true, amount: 0.2 }}
           variants={containerVariants}
         >
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#45B7D1] mb-4">
-              המוצרים שלנו
-            </h2>
-            <p className="text-lg text-gray-700">
-              מוצרי טיפוח איכוtiים למראה מושלם
-            </p>
-          </div>
+          <motion.h2 
+            variants={itemVariants}
+            className="text-4xl md:text-5xl font-bold text-center mb-4 text-[#45B7D1]"
+          >
+            המוצרים שלנו
+          </motion.h2>
+          <motion.p 
+            variants={itemVariants}
+            className="text-center text-gray-600 mb-12 max-w-2xl mx-auto"
+          >
+            מגוון מוצרי טיפוח איכוtiים למראה מושלם
+          </motion.p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {products.map((product) => (
               <motion.div
                 key={product.id}
                 variants={itemVariants}
                 className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="relative h-48 w-full">
+                <div className="relative h-64 w-full">
                   <Image
                     src={product.imageUrl}
                     alt={product.name}
                     fill
-                    className="object-cover"
+                    style={{ objectFit: 'cover' }}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
                 </div>
-                <div className="p-4">
-                  <h3 className="text-xl font-bold text-[#FF6B6B] mb-2">
-                    {product.name}
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    {product.description}
-                  </p>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 text-[#FF6B6B]">{product.name}</h3>
+                  <p className="text-gray-600">{product.description}</p>
+                  <button className="mt-4 flex items-center gap-2 text-[#45B7D1] hover:text-[#FF6B6B] transition-colors">
+                    <FaInfoCircle />
+                    <span>פרטים נוספים</span>
+                  </button>
                 </div>
               </motion.div>
             ))}
